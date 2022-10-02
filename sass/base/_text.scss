@@ -13,13 +13,13 @@
 }
 
 .title {
-    font-size: 3rem;
-    font-family: wizard;
-  }
+  font-size: 3rem;
+  font-family: wizard;
+}
 .main__paragraph {
-    max-width: 40rem;
-    font-size: 2.5rem;
-  }
+  max-width: 40rem;
+  font-size: 2.5rem;
+}
 
 .footer__text {
   font-size: 3rem;
@@ -32,7 +32,14 @@
     cursor: pointer;
   }
   &:hover {
-    color: goldenrod;
+    background-color: #fdbb2d;
+    background-image: linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+
     font-size: 5rem;
     opacity: 1;
     transform: translateY(-1rem);

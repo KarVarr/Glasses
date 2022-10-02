@@ -1,7 +1,7 @@
 body,
 html {
   height: 100%;
-  font-family: allura;
+  font-family: allura, sans-serif;
 }
 
 .swiper-container,
@@ -12,14 +12,14 @@ html {
 }
 
 .swiper-slide {
-  cursor: url("../../cursor/harry.png"), auto;
   text-align: center;
   font-size: 1.8rem;
   background: #fff;
   /* Center slide text vertically */
 }
 .swiper-slide:nth-child(1) {
-  background: #d8e2dc;
+  background: #74ebd5;
+  background: linear-gradient(to right, #acb6e5, #74ebd5);
 }
 .swiper-slide:nth-child(2) {
   background: #ffe5d9;
@@ -37,7 +37,10 @@ html {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  cursor: url("../cursors/Pointer_gauntlethq_off_32x32.webp"), auto;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
 }
 
 h1,
@@ -147,7 +150,13 @@ menu {
   cursor: pointer;
 }
 .footer__text:hover {
-  color: goldenrod;
+  background-color: #fdbb2d;
+  background-image: linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
   font-size: 5rem;
   opacity: 1;
   transform: translateY(-1rem);
