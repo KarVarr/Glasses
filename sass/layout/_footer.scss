@@ -1,0 +1,25 @@
+.footer {
+  .footer__line {
+    width: 100%;
+    height: 0.2rem;
+    background-color: rgba($color: #000000, $alpha: 0.1);
+  }
+  .footer__button {
+    display: inline-block;
+    width: 15rem;
+    height: 9rem;
+    background: url(../../images/glassesOff.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    transform: translateY(-4.2rem);
+    &:hover {
+      background: url(../../images/glasses2.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      
+    }
+  }
+}
