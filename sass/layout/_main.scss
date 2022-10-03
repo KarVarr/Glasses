@@ -1,20 +1,33 @@
 .main {
   padding: 4% 0;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 2rem;
 
   .main__glasses {
-    width: 90%;
+    max-width: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    //filter: blur(4px);
+
+    &:hover .main__img {
+      filter: blur(10px);
+      z-index: 1;
+      cursor: pointer;
+    }
+    &:hover .glasses__title {
+      @include textShadow;
+      filter: blur(0px);
+      z-index: 10;
+      cursor: pointer;
+
+    }
     .glasses__title {
-      font-size: 26rem;
+      font-size: 22rem;
       font-weight: 500;
       font-family: wizard, sans-serif;
       color: #fff;
@@ -22,18 +35,27 @@
       position: absolute;
       z-index: 1;
       filter: blur(5px);
+      transition: $transition;
     }
     .main__img {
+      max-width: 55rem;
       position: relative;
       z-index: 5;
+      transition: $transition;
+
       &::after {
         content: '';
-        width: 30rem;
-        height: 30rem;
-        border-radius: 50%;
+        width: 40rem;
+        height: 1.5rem;
+        border-radius: 80%;
+        background-color: rgba(0, 0, 0, 0.695);
         position: absolute;
-        top: 0;
-        left: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        will-change: transform;
+
+        filter: blur(10px);
       }
     }
   }

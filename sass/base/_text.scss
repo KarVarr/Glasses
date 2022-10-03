@@ -32,14 +32,7 @@
     cursor: pointer;
   }
   &:hover {
-    background-color: #fdbb2d;
-    background-image: linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-
+    @include textColor;
     font-size: 5rem;
     opacity: 1;
     transform: translateY(-1rem);
