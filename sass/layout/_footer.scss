@@ -8,14 +8,14 @@
     display: inline-block;
     width: 15rem;
     height: 9rem;
-    background: url(../../images/glassesOff.svg);
+    background: url(../images/glassesOff.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
     transform: translateY(-4.2rem);
     &:hover {
-      background: url(../../images/glasses2.svg);
+      background: url(../images/glasses2.svg);
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
