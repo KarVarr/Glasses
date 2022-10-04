@@ -15,19 +15,19 @@ html {
   text-align: center;
   font-size: 1.8rem;
   background: #fff;
-  /* Center slide text vertically */
 }
 .swiper-slide:nth-child(1) {
-  background: #8e9eab;
+  background: #5433ff;
   background: -webkit-gradient(
     linear,
     left top,
     right top,
-    from(#eef2f3),
-    to(#8e9eab)
+    from(#a5fecb),
+    color-stop(#20bdff),
+    to(#5433ff)
   );
-  background: -o-linear-gradient(left, #eef2f3, #8e9eab);
-  background: linear-gradient(to right, #eef2f3, #8e9eab);
+  background: -o-linear-gradient(left, #a5fecb, #20bdff, #5433ff);
+  background: linear-gradient(to right, #a5fecb, #20bdff, #5433ff);
 }
 .swiper-slide:nth-child(2) {
   background: #215f00;
@@ -57,13 +57,13 @@ html {
   background: #333333;
   background: -webkit-gradient(
     linear,
-    right top,
     left top,
+    right top,
     from(#dd1818),
-    to(#333333)
+    to(#101010)
   );
-  background: -o-linear-gradient(right, #dd1818, #333333);
-  background: linear-gradient(to left, #dd1818, #333333);
+  background: -o-linear-gradient(left, #dd1818, #101010);
+  background: linear-gradient(to right, #dd1818, #101010);
 }
 .swiper-slide:nth-child(5) {
   background: #03001e;
@@ -225,6 +225,29 @@ menu {
   justify-items: center;
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
+@media only screen and (max-width: 75em) {
+  .header {
+    padding: 1rem 5rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
 .header .header__nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -263,6 +286,13 @@ menu {
   -ms-flex-pack: end;
   justify-content: end;
   gap: 4rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .header .header__social {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
 }
 .header .header__social .social__img {
   width: 2.5rem;
@@ -322,6 +352,11 @@ menu {
   justify-content: space-between;
   gap: 2rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .main {
+    min-height: 70vh;
+  }
+}
 .main .main__glasses {
   max-width: 90%;
   display: -webkit-box;
@@ -352,7 +387,7 @@ menu {
   cursor: pointer;
 }
 .main .main__glasses .glasses__title {
-  font-size: 22rem;
+  font-size: 15rem;
   font-weight: 500;
   font-family: wizard, sans-serif;
   color: #fff;
@@ -361,17 +396,36 @@ menu {
   z-index: 1;
   -webkit-filter: blur(5px);
   filter: blur(5px);
-  -webkit-transition: all 0.15s linear;
-  -o-transition: all 0.15s linear;
-  transition: all 0.15s linear;
+  -webkit-transition: -webkit-filter 0.3s linear;
+  transition: -webkit-filter 0.3s linear;
+  -o-transition: filter 0.3s linear;
+  transition: filter 0.3s linear;
+  transition: filter 0.3s linear, -webkit-filter 0.3s linear;
+}
+@media only screen and (min-width: 87em) {
+  .main .main__glasses .glasses__title {
+    font-size: 22rem;
+  }
+}
+@media only screen and (max-width: 75em) {
+  .main .main__glasses .glasses__title {
+    font-size: 10rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .main .main__glasses .glasses__title {
+    font-size: 6rem;
+  }
 }
 .main .main__glasses .main__img {
   max-width: 55rem;
   position: relative;
   z-index: 5;
-  -webkit-transition: all 0.15s linear;
-  -o-transition: all 0.15s linear;
-  transition: all 0.15s linear;
+  -webkit-transition: -webkit-filter 0.3s linear;
+  transition: -webkit-filter 0.3s linear;
+  -o-transition: filter 0.3s linear;
+  transition: filter 0.3s linear;
+  transition: filter 0.3s linear, -webkit-filter 0.3s linear;
 }
 .main .main__glasses .main__img::after {
   content: '';
@@ -388,4 +442,7 @@ menu {
   will-change: transform;
   -webkit-filter: blur(10px);
   filter: blur(10px);
+}
+.main .main__glasses .main__img .imgFix {
+  max-height: 36rem;
 }
