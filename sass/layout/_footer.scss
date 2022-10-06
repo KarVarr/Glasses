@@ -3,6 +3,9 @@
     width: 100%;
     height: 0.2rem;
     background-color: rgba($color: #000000, $alpha: 0.1);
+    @include respond(phone) {
+      margin-top: 2rem;
+    }
   }
   .footer__button {
     display: inline-block;
@@ -14,12 +17,12 @@
     background-size: cover;
     cursor: pointer;
     transform: translateY(-4.2rem);
+    
     &:hover {
       background: url(../images/glasses2.svg);
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      
     }
   }
 }

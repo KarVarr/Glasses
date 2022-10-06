@@ -7,7 +7,7 @@
   justify-content: space-between;
   gap: 2rem;
   @include respond(phone) {
-    min-height: 70vh;
+    min-height: 65vh;
   }
   .main__glasses {
     max-width: 90%;
@@ -67,7 +67,7 @@
         filter: blur(10px);
       }
       .imgFix {
-        max-height: 36rem;
+        max-height: 25rem;
       }
     }
   }
